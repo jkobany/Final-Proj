@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonatna Kobany</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="">
+</head>
+
+<body>
+    <header id="headerOne">
+        <a href="#" id="eye"></a>
+        <a href="#" id="speaker"></a>
+       <!-- <form id=search name="Device" action="" method="get">-->
+
+            <div class="container"><input class="main" id="autocomplete" type="text" /><span class="searchicon"></span>
+                <div class="microphone">
+                    <div class="mic-stand"></div>
+                </div>
+            </div>
+        <!--</form>-->
+        <a href="#" id="ring"></a>
+        <a href="/loginuser/" id="face"></a>
+    </header>
+
+    <section id="boxs">
+        <img id="oneImg" alt="DV GUIDE" src="{% static 'images/bigLogo.png' %}">
+        <section class="Cards">
+            <a class="card" href="/devices/"><img src="{% static 'images/audio-jack.png' %}" alt="My Devices"><span>My
+                    Devices</span></a>
+        </section>
+        <section class="Cards">
+            <a class="card" href="#"><img src="{% static 'images/father-and-daughter.png' %}"
+                    alt="Family"><span>Family</span></a>
+        </section>
+        <section class="Cards">
+            <a class="card" href="#"><img src="{% static 'images/documents.png' %}" alt="Devices Archive"><span>Devices
+                    Archive</span></a>
+        </section>
+        <section class="Cards">
+            <a class="card" href="#"><img src="{% static 'images/warranty.png' %}"
+                    alt="Warrnty"><span>Warrnty</span></a>
+        </section>
+    </section>
+
+    <footer>
+        <span> &copy; All rights reserved to Jonatan Kobany.</span>
+    </footer>
+    <script>
+        var devices = {{ devices | safe }}
+    </script>
+     <script src="{% static 'includes/jquery.autocomplete.js'%}"></script>
+    <script src="{% static 'includes/index.js'%}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,736 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header, body, main, footer, nav, aside, section, div{
+  display: block;
+}
+
+header{
+  height: 100px;
+  background-color: white;
+  position: relative;
+  border: 2px solid black;
+  width: 100%;
+}
+
+#eye{
+  background-image: url("../images/eye.png");
+  background-repeat: no-repeat;
+  display:flex;
+  width:31px;
+  height: 31px;
+  position: absolute;
+  left: 200px ;
+  top: 40px;
+}
+
+#speaker{
+  background-image: url("../images/speaker.jpg");
+  background-repeat: no-repeat;
+  display:flex;
+  width: 50px;
+  height: 40px;
+  left: 250px;
+  top: 30px;
+  position: absolute;
+}
+
+#logo{
+  background-image: url("../images/logo.png");
+  background-repeat: no-repeat;
+  display: flex;
+  height: 90px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+#ring{
+  background-image: url("../images/bell.png");
+  background-repeat: no-repeat;
+  display: flex;
+  width: 40px;
+  height: 45px;
+  top: 30px;
+  right: 300px;
+  position: absolute;
+}
+
+#face{
+  background-image: url("../images/user.jpeg");
+  background-repeat: no-repeat;
+  display: flex;
+  width: 40px;
+  height: 45px;
+  top: 40px;
+  right: 240px;
+  position: absolute;
+}
+
+/*page 1*/
+
+#headerOne{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+	position: relative;
+}
+
+.main {
+	position: relative;
+	border: 2px solid black;
+	height: 25px;
+	background: rgb(255, 255, 255);
+	width: 190px;
+	border-radius: 50px;
+	padding-left: 31px;
+	padding-right: 11px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-size: 13px;
+	color: #555;
+}
+
+.main:focus {
+	outline: none;
+}
+
+.searchicon {
+	position: absolute;
+	height: 12px;
+	width: 12px;
+	background: transparent;
+	border: 3px solid black;
+	left: 10px;
+	top: 8px;
+	border-radius: 100%;
+}
+
+.searchicon:after {
+	content: '';
+	position: absolute;
+	background: black;
+	height: 6px;
+	width: 3px;
+	bottom: -5px;
+	right: -3px;
+	transform: rotate(-45deg);
+}
+
+.microphone {
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	background: #FF5252;
+	right: 12px;
+	top: 6px;
+	border-radius: 100%;
+	box-shadow: 0px 1px 2px 0px #555;
+}
+
+.microphone:after {
+	content: '';
+	position: absolute;
+	background: #c70000;
+	height: 12px;
+	width: 8px;
+	border-radius: 10px;
+	left: 8px;
+	top: 3px;
+}
+
+.microphone:before {
+	content: '';
+	position: absolute;
+	border-bottom: 2px solid #c70000;
+	height: 10px;
+	width: 10px;
+	border-radius: 100%;
+	top: 6px;
+	left: 7px;
+}
+
+.mic-stand {
+	position: absolute;
+	height: 4px;
+	width: 2px;
+	background: #c70000;
+	bottom: 3px;
+	left: 11px;
+}
+
+#oneImg{
+  position: relative;
+  margin: 0 auto;
+}
+
+#boxs{
+  height: 300px;
+  width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px auto;
+}
+
+.Cards{
+  display: flex;
+  box-shadow: 0px 2px 7px rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  margin-bottom: 69px;
+  border: 2px solid black;
+  width: 300px;
+  margin-left: 25px;
+  margin-top: 20px;
+}
+
+.card{
+  display: inline-flex;
+  width: 190px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.card span{
+  display: inline-flex;
+  font-style: normal;
+  font-size: 16px;
+  color: black;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+/*page 2*/
+
+
+#Aside > ul > li{
+  width: 450px;
+  height: 117px;
+  border-bottom: 1.5px solid black;
+  border-right: 1.5px solid black;
+  font-size: 25px;
+  background-image: url("../images/right.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
+#Aside > ul > li > a{
+  margin-left: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
+  color: black;
+  margin-top: 20px;
+
+}
+.mainHeaderDevices{
+
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+}
+.mainDevicesContainer {
+
+    position: absolute;
+    left: 450px;
+    top: 100px;
+    z-index: 1;
+
+}
+#Aside {
+
+    position: fixed;
+    top: 102px;
+    width: 100%;
+
+}
+
+main{
+  position: relative;
+}
+
+h4{
+  position: absolute;
+  margin-top: 28px;
+  margin-left: 40px;
+  font-size: 20px;
+  text-decoration: underline ;
+}
+
+/*-----------breadcrumbs------*/
+
+.cont_breadcrumbs_3 {
+  position: relative;
+  width: 100%;
+  float: left;
+  margin: 20px 20px;
+}
+
+.cont_breadcrumbs_3 > ul > li {
+  position: relative;
+  float: left;
+  transform: skewX(-15deg);  
+  background-color: #fff;
+z-index: 1;
+transition: all 0.5s;
+margin-left: 5px;
+}
+
+.cont_breadcrumbs_3 > ul > li:hover {
+ background-color: #CFD8DC;
+}
+
+.cont_breadcrumbs_3 > ul > li  > a {
+  display: block;
+  padding: 10px;
+  font-size: 20px;
+ transform: skewX(15deg);
+ text-decoration:none;
+ color: #444;
+font-weight: 300;
+}
+.cont_breadcrumbs_3 > ul > li:last-child {
+  background-color: #78909C;
+}
+
+.cont_breadcrumbs_3 > ul > li:last-child > a {
+  color: #fff; 
+
+}
+
+
+h2{
+  position: absolute;
+  top: -45px;
+  left: 240px;
+  font-size: 48px;
+  text-decoration: underline;
+}
+
+section{
+  display: flex;
+}
+
+
+#insideNav > section{
+  width: 650px;
+  height: 117px;
+  border-bottom: 1.5px solid black;
+  font-size: 25px;
+  background-image: url("../images/arrow-down.png") ;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
+#insideNav > section:nth-child(3){
+  background-image: none;
+}
+
+#devicesOne{
+  position: relative;
+}
+
+#devicesOne span{
+  position: absolute;
+  top: 32px;
+  left: 143px;
+}
+
+#links{
+  position: absolute;
+  top: 32px;
+  left: 375px;
+}
+
+#devicesOne .device {
+    height: 117px;
+    display: block;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #000;
+}
+body #insideNav  #devicesOne {
+    position: relative;
+    display: block;
+    height: 100%;
+}
+#devicesOne a{
+  background-repeat: no-repeat;
+  background-color: white;
+  height: 35px;
+  width: 35px;
+  margin-left: 20px;
+}
+
+#walk{
+  background-image: url("../images/walk.jpeg") ;
+}
+
+#pencil{
+  background-image: url("../images/pencil.jpeg") ;
+}
+
+#delete{
+  background-image: url("../images/delete.jpeg") ;
+}
+
+#insideNav > section > img{
+  height: 50px;
+  width: 50px;
+  margin: auto 15px;
+}
+
+#insideNav > section > span{
+  margin: auto 15px;
+}
+
+#insideNav > section > button , #boxOne > a > button{
+  background-image: url("../images/plus.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border: none;
+  margin-top: 40px;
+}
+
+article{
+  position: relative;
+  top: 155px;
+}
+
+/*FOTTER*/
+
+footer{
+  width: 100%;
+  height: 53px;
+  background-color: black;
+  color: rgb(209, 209, 209);
+  position: fixed;
+  bottom: 0px;
+}
+
+footer > span{
+  position: absolute;
+  margin-top: 30px;
+}
+
+/*--------------------------FormPage------------------*/
+
+p{
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+#myForm{
+width: 350px;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+margin-left: 20px;
+height: 220px;
+
+}
+#myForm .label{
+width: 100px;
+}
+#myForm .input{
+  width: 50px;
+}
+
+
+
+/* Save buttun */
+
+#button1 {
+  height: 40px;
+  text-align: center;
+  width: 100px;
+  border-radius:40px;
+  background: #fff;
+  border: 2px solid #1ECD97;
+  color: #1ECD97;
+  letter-spacing:1px;
+  transition: all 0.25s ease;
+  }
+  
+  #button1 font{
+    size:12px;
+  }
+  #button1:hover {
+    color:white;
+    background: #1ECD97;
+  }
+  
+  #button1:after {
+    content:"SUBMIT";
+  }
+
+  /*responsiv*/
+
+@media (max-width: 414px){
+
+  footer{
+    display: none;
+  }
+
+  header{
+    height: 80px;
+  }
+  
+  #eye{
+    left: 1px ;
+    top: 23px;
+  }
+  
+  #speaker{
+    left: 33px;
+    top: 13px;
+  }
+  
+  #logo{
+    background-image: url("../images/logo_med.jpeg");
+    margin-left: 80px;
+  }
+  
+  #ring{
+    top: 18px;
+    right: 33px;
+  }
+  
+  #face{
+    top: 28px;
+    right: -9px;
+  }
+
+  .Cards{
+    height: 60px;
+    width: 300px;
+    margin: 10px auto;
+  }
+
+  #boxs{
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  #oneImg{
+    height: 100px;
+    width: 350px;
+    margin-left: -71px;
+  }
+
+
+
+  h4{
+    display: none;
+  }
+
+  h2{
+    font-size: 30px;
+    left: 136px;
+  }
+
+  #insideNav > section > button , #boxOne > a > button{
+    margin-top: 26px;
+  }
+
+  #links{
+    left: 208px;
+  }
+
+  p > span:nth-child(1), p > span:nth-child(2){
+    display: none;
+  }
+
+  #Hambu{
+    background-image: url("../images/hamburger.jpeg");
+    background-repeat: no-repeat;
+    background-color: white;
+  } 
+}
+
+ #Login {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 display: block;
+	 width: 100%;
+	 max-width: 400px;
+	 background-color: #fff;
+	 margin: 0;
+	 padding: 2.25em;
+	 box-sizing: border-box;
+	 border: solid 1px #ddd;
+	 border-radius: 0.5em;
+	 font-family: 'Source Sans Pro', sans-serif;
+}
+#Login .svgContainer {
+	 position: relative;
+	 width: 200px;
+	 height: 200px;
+	 margin: 0 auto 1em;
+	 border-radius: 50%;
+	 pointer-events: none;
+}
+#Login .svgContainer div {
+	 position: relative;
+	 width: 100%;
+	 height: 0;
+	 overflow: hidden;
+	 border-radius: 50%;
+	 padding-bottom: 100%;
+}
+#Login .svgContainer .mySVG {
+	 position: absolute;
+	 left: 0;
+	 top: 0;
+	 width: 100%;
+	 height: 100%;
+	 pointer-events: none;
+}
+#Login .svgContainer:after {
+	 content: "";
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 z-index: 10;
+	 width: inherit;
+	 height: inherit;
+	 box-sizing: border-box;
+	 border: solid 2.5px #217093;
+	 border-radius: 50%;
+}
+#Login .inputGroup {
+	 margin: 0 0 2em;
+	 padding: 0;
+	 position: relative;
+}
+#Login .inputGroup:last-of-type {
+	 margin-bottom: 0;
+}
+#Login label {
+	 margin: 0 0 12px;
+	 display: block;
+	 font-size: 1.25em;
+	 color: #217093;
+	 font-weight: 700;
+	 font-family: inherit;
+}
+#Login input[type="text"], #Login input[type="number"],#Login input[type="url"], #Login input[type="search"], #Login input[type="password"] {
+	 display: block;
+	 margin: 0;
+	 padding: 0 1em 0;
+	 padding: 0.875em 1em 0;
+	 background-color: #f3fafd;
+	 border: solid 2px #217093;
+	 border-radius: 4px;
+	 -webkit-appearance: none;
+	 box-sizing: border-box;
+	 width: 100%;
+	 height: 65px;
+	 font-size: 1.55em;
+	 color: #353538;
+	 font-weight: 600;
+	 font-family: inherit;
+	 transition: box-shadow 0.2s linear, border-color 0.25s ease-out;
+}
+#Login input[type="text"]:focus, #Login input[type="number"]:focus, #Login input[type="url"]:focus, #Login input[type="search"]:focus, #Login input[type="password"]:focus {
+	 outline: none;
+	 box-shadow: 0px 2px 10px rgba(0, 0, 0, .1);
+	 border: solid 2px #4eb8dd;
+}
+#Login button {
+	 display: block;
+	 margin: 0;
+	 padding: 0.65em 1em 1em;
+	 background-color: #4eb8dd;
+	 border: none;
+	 border-radius: 4px;
+	 box-sizing: border-box;
+	 box-shadow: none;
+	 width: 100%;
+	 height: 65px;
+	 font-size: 1.55em;
+	 color: #fff;
+	 font-weight: 600;
+	 font-family: inherit;
+	 transition: background-color 0.2s ease-out;
+}
+#Login button:hover, #Login button:active {
+	 background-color: #217093;
+}
+#Login .inputGroup1 .helper {
+	 position: absolute;
+	 z-index: 1;
+	 font-family: inherit;
+}
+#Login .inputGroup2 input[type="password"] {
+	 padding: 0.4em 1em 0.5em;
+}
+#Login .inputGroup2 input[type="text"] {
+	 padding: 0.025em 1em 0;
+}
+#Login .inputGroup2 #showPasswordToggle {
+	 display: block;
+	 padding: 0 0 0 1.45em;
+	 position: absolute;
+	 top: 0.25em;
+   right: 0;
+   font-size: 1em;
+   left:260px;
+   
+}
+#Login .inputGroup2 #showPasswordToggle input {
+	 position: absolute;
+	 z-index: -1;
+   opacity: 0;
+}
+#Login .inputGroup2 #showPasswordToggle .indicator {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 height: 0.85em;
+	 width: 0.85em;
+	 background-color: #f3fafd;
+	 border: solid 2px #217093;
+	 border-radius: 3px;
+}
+#Login .inputGroup2 #showPasswordToggle .indicator:after {
+	 content: "";
+	 position: absolute;
+	 left: 0.25em;
+	 top: 0.025em;
+	 width: 0.2em;
+	 height: 0.5em;
+	 border: solid #217093;
+	 border-width: 0 3px 3px 0;
+	 transform: rotate(45deg);
+	 visibility: hidden;
+}
+#Login .inputGroup2 #showPasswordToggle input:checked ~ .indicator:after {
+	 visibility: visible;
+}
+#Login .inputGroup2 #showPasswordToggle input:focus ~ .indicator, #Login .inputGroup2 #showPasswordToggle input:hover ~ .indicator {
+	 border-color: #4eb8dd;
+}
+#Login .inputGroup2 #showPasswordToggle input:disabled ~ .indicator {
+	 opacity: 0.5;
+}
+#Login .inputGroup2 #showPasswordToggle input:disabled ~ .indicator:after {
+	 visibility: hidden;
+}
+
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+.autocomplete-group { padding: 2px 5px; }
+.autocomplete-group strong { display: block; border-bottom: 1px solid #000; }

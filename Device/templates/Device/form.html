@@ -1,0 +1,79 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Device Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+    <link rel="shortcut icon" href="">
+</head>
+
+<body>
+    <header>
+        <a href="#" id="eye"></a>
+        <a href="#" id="speaker"></a>
+        <a href="#" id="ring"></a>
+        <a href="/loginuser/" id="face"></a>
+        <a href="/" id="logo"></a>
+    </header>
+
+    <div class="cont_breadcrumbs_3">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/devices/">My Devices</a></li>
+            <li><a href="#">Add New Device</a></li>
+        </ul>
+    </div>
+
+    <form id="myForm" action="{{action}}" method="post">
+        {% csrf_token %}
+            <label> Name: 
+                {{ form.deviceName }}
+            </label>
+            <br><br>
+
+            <label>Buying Date:
+                <input type="date" name="dateBought" required {{ form.dateBought }}
+            </label>
+                <br><br>
+
+            <label>Warranty:
+                <input type="file" name="warranty">
+            </label>
+            <br><br>
+
+            <label>Ensured By:
+                <select id="Ensured_by" name="ensuredBy" required {{ form.ensuredBy }}</select>
+            </label>
+            <br><br>
+
+            <label>Insurance end date:
+                <input type="date" name="insuranceEndDate" required {{ form.insuranceEndDate }} </label>
+            <br><br>
+
+            <span>Product maintenance alerts:</span><br><br>
+            {%  for input in form.productMaintenanceAlerts %}
+
+                <label class="container">{{ input }}
+
+            </label>
+            {% endfor %}
+           <br><br>
+
+            <div>
+                <button id="button1" type='sumbit'></button>
+            </div>
+    </form>
+    <footer>
+        <span> &copy; All rights reserved to Jonatan Kobany.</span>
+    </footer>
+
+    <script src="{% static 'includes/form.js'%}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonatna Kobany</title>
+  <link rel="stylesheet" href="{% static 'css/style.css'%}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="{% static 'includes/devices.js'%}"></script>
+  <link rel="shortcut icon" href="">
+</head>
+
+<body>
+  <header class="mainHeaderDevices">
+    <a href="#" id="eye"></a>
+    <a href="#" id="speaker"></a>
+    <a href="#" id="ring"></a>
+    <a href="/loginuser/" id="face"></a>
+    <a href="/" id="logo"></a>
+  </header>
+  
+  <section id="Hambu">
+    <aside id=Aside>
+      <ul>
+        <li><a href="/">Search</a></li>
+        <li><a href="#"><b>My Devices</b></a></li>
+        <li><a href="#">Archive</a></li>
+        <li><a href="#">Family</a></li>
+        <li><a href="#">Warrnty</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </aside>
+    <main class="mainDevicesContainer">
+      <div class="cont_breadcrumbs_3">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/">My Devices</a></li>
+        </ul>
+      </div>
+      <article id=insideNav>
+        <h2>My Devices</h2>
+        <section id="boxOne">
+          <img src="{% static 'images/washing-machine.png' %}" alt="Washing Machine">
+          <span>Washing Machine</span>
+          <a href="/create/"><button></button></a>
+        </section>
+        <section id="devicesOne">
+             {% for device in devices %}
+        <section class="device">
+          <span>{{device.deviceName}}</span>
+          <section id="links">
+            <a href="#" id="walk"></a>
+            <a href="edit/{{ device.id }}" id="pencil"></a>
+            <a href="delete/{{ device.id }}" id="delete"></a>
+          </section>
+        </section>
+
+          {% endfor %}
+        </section>
+        <section>
+          <img src="{% static 'images/air-conditioner.png' %}" alt="Air Conditiner">
+          <span>Air Conditiner</span>
+          <button></button>
+        </section>
+        <section>
+          <img src="{% static 'images/fridge.png' %}" alt="Fridge">
+          <span>Fridge</span>
+          <button></button>
+        </section>
+        <section id="oven">
+          <img src="{% static 'images/microwave-oven.png' %}" alt="Oven">
+          <span>Oven</span>
+          <button></button>
+        </section>
+      </article>
+    </main>
+  </section>
+</body>
+
+</html>
